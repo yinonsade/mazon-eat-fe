@@ -1,0 +1,66 @@
+@import "../../../App.scss";
+
+.dishInMenu {
+    padding: 1rem;
+    border-top: 1px solid lightgrey;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+    @media only screen and (max-width: 630px) {
+        grid-template-columns: 60% 40%;
+    }
+
+    .dish {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .dish-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #444;
+            .price {
+                margin-right: 1rem;
+            }
+        }
+        .dish-info {
+            font-size: 1.4rem;
+            color: #555;
+            margin-top: .2rem;
+            .info {
+                &::after {
+                    margin: 0 1rem;
+                    content: "|";
+                }
+            }
+        }
+    }
+
+    .dishInMenuBtns {
+        justify-self: end;
+        font-size: 1.6rem;
+        color: #444;
+
+        button {
+            border: none;
+            border-radius: 50%;
+            font-size: 1.6rem;
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+            color: $mainColor;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s ease;
+            &:hover {
+                background-color: rgba(96, 89, 190, 0.24);
+                transition: all .2s ease;
+            }
+        }
+        .sum {
+            margin: 0 1rem;
+        }
+    }
+}

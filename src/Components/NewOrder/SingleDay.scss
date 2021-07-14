@@ -1,0 +1,44 @@
+@import "../../App.scss";
+
+.SingleDay {
+    position: relative;
+    width: 100%;
+    // height: max-content;
+
+    background-color: white;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: min-content;
+        margin-bottom: 2rem;
+        padding: 0;
+        h3 {
+            color: $mainColor;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        span {
+            color: $mainColor;
+            font-size: 1.4rem;
+            font-weight: 600; 
+        }
+    }
+
+    .content {
+        width: 100%;
+        // transition: all .3s ease;
+        // height: 0;
+        // animation: div .3s forwards;
+    }
+}

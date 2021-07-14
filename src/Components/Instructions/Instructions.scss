@@ -1,0 +1,95 @@
+@import "../../App.scss";
+
+.Instructions {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.534);
+    .dialog {
+        background-color: white;
+        width: 50%;
+        max-height: 80vh;
+        border-radius: 5px;
+        position: relative;
+        overflow-x: hidden;
+        box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+        // transition: all .2s;
+        animation: animateZoom .7s ease;
+        .content {
+            height: 100%;
+            // background-color: red;
+            padding: 4rem;
+            box-sizing: border-box;
+            overflow-x: auto;
+            width: 100%;
+            display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: $mainColor;
+            font-size: 3rem;
+        }
+        p {
+            line-height: 1.5;
+            width: 100%;
+            span {
+                font-weight: 600;
+                display: block;
+            }
+            &:nth-child(3){
+                margin-bottom: .5rem;
+            }
+        }
+        ol {
+            width: 100%;
+            margin: 0;
+            font-size: 1.6rem;
+        }
+    }
+    .close {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        color: $lightGrey;
+        border: none;
+        background-color: transparent;
+        font-size: 2.5rem;
+        cursor: pointer;
+        transition: .2s ease;
+        &:hover {
+            color: $error;
+            transition: .2s ease;
+        }
+    }
+    }
+}
+
+
+// animation for modal
+
+@keyframes animateZoom {
+    from {transform: scale(.5); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+
+@media only screen and (max-width: 900px) {
+    .Instructions {
+        .dialog {
+            width: 70%;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Instructions {
+        .dialog {
+            width: 90%;
+        }
+    }
+}
